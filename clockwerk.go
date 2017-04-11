@@ -4,10 +4,12 @@ import (
 	"time"
 )
 
+// Job is an interface for added jobs.
 type Job interface {
 	Run()
 }
 
+// Entry consists of a schedule and the job to execute on that schedule.
 type Entry struct {
 	Period time.Duration
 	Next   time.Time
@@ -22,16 +24,20 @@ func newEntry(period time.Duration) *Entry {
 	}
 }
 
+// Do adds a Job to the Entry.
 func (e *Entry) Do(job Job) {
 	e.Job = job
 }
 
+// Clockwerk keeps track of any number of entries, invoking associated Job's Run
+// method as specified by the schedule.
 type Clockwerk struct {
 	entries []*Entry
 	stop    chan struct{}
 	running bool
 }
 
+// New returns a new Clockwerk job runner.
 func New() *Clockwerk {
 	return &Clockwerk{
 		entries: nil,
@@ -40,6 +46,7 @@ func New() *Clockwerk {
 	}
 }
 
+// EverySeconds adds a new Entry to the Clockwerk to be run and returns that Entry.
 func (c *Clockwerk) EverySeconds(seconds uint64) *Entry {
 	entry := newEntry(time.Duration(seconds) * time.Second)
 
@@ -52,6 +59,7 @@ func (c *Clockwerk) EverySeconds(seconds uint64) *Entry {
 	return entry
 }
 
+// Start the Clockwerk in its own go-routine, or no-op if already started.
 func (c *Clockwerk) Start() {
 	if c.running {
 		return
@@ -60,6 +68,7 @@ func (c *Clockwerk) Start() {
 	go c.run()
 }
 
+// Stop the Clockwerk if it is running.
 func (c *Clockwerk) Stop() {
 	if !c.running {
 		return
