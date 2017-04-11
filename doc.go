@@ -2,6 +2,7 @@
 Package clockwerk implements an in-process scheduler for periodic jobs.
 
 Usage
+
 Callers may register Jobs to be invoked on a given schedule. Clockwerk will run
 them in their own goroutines.
 
