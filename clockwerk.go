@@ -46,9 +46,9 @@ func New() *Clockwerk {
 	}
 }
 
-// EverySeconds adds a new Entry to the Clockwerk to be run and returns that Entry.
-func (c *Clockwerk) EverySeconds(seconds uint64) *Entry {
-	entry := newEntry(time.Duration(seconds) * time.Second)
+// Every schedules a new Entry and returns it.
+func (c *Clockwerk) Every(period time.Duration) *Entry {
+	entry := newEntry(period)
 
 	c.schedule(entry)
 
