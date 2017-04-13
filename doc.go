@@ -14,7 +14,7 @@ them in their own goroutines.
   ...
   var job DummyJob
   c := clockwerk.New()
-  c.EverySeconds(30).Do(job)
+  c.Every(30 * time.Second).Do(job)
   c.Start()
   ...
   // Funcs are invoked in their own goroutine, asynchronously.

@@ -24,8 +24,8 @@ func TestDo(*testing.T) {
 	var job2 DummyJob2
 
 	c := New()
-	c.EverySeconds(1).Do(job1)
-	c.EverySeconds(1).Do(job2)
+	c.Every(1 * time.Second).Do(job1)
+	c.Every(1 * time.Second).Do(job2)
 	defer c.Stop()
 	c.Start()
 
