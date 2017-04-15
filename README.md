@@ -26,7 +26,7 @@ func (d DummyJob) Run() {
 func main() {
   var job DummyJob
   c := clockwerk.New()
-  c.EverySeconds(30).Do(job)
+  c.Every(30 * time.Second).Do(job)
   c.Start()
 }
 ```
