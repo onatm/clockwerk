@@ -1,6 +1,6 @@
 # clockwerk
 
-[![Build Status](https://travis-ci.org/onatm/clockwerk.svg?branch=master)](https://travis-ci.org/onatm/clockwerk) &nbsp; [![Go Report Card](https://goreportcard.com/badge/github.com/onatm/clockwerk)](https://goreportcard.com/report/github.com/onatm/clockwerk) &nbsp; [![GoDoc](http://godoc.org/github.com/onatm/clockwerk?status.png)](http://godoc.org/github.com/onatm/clockwerk) 
+[![Build Status](https://travis-ci.org/onatm/clockwerk.svg?branch=master)](https://travis-ci.org/onatm/clockwerk) &nbsp; [![Coverage Status](https://coveralls.io/repos/github/onatm/clockwerk/badge.svg?branch=master)](https://coveralls.io/github/onatm/clockwerk?branch=master) &nbsp; [![Go Report Card](https://goreportcard.com/badge/github.com/onatm/clockwerk)](https://goreportcard.com/report/github.com/onatm/clockwerk) &nbsp; [![GoDoc](http://godoc.org/github.com/onatm/clockwerk?status.png)](http://godoc.org/github.com/onatm/clockwerk) 
 
 Job Scheduling Library
 
