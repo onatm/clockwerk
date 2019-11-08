@@ -116,8 +116,6 @@ func (c *Clockwerk) schedule(e *Entry) {
 	} else {
 		e.Next = e.Prev.Add(e.Period)
 	}
-
-	fmt.Printf("%v %s %s %s\n", e.Sharp, e.Period, e.Prev.Format(time.RFC3339), e.Next.Format(time.RFC3339))
 }
 
 func (c *Clockwerk) run() {
