@@ -13,14 +13,12 @@ type Job interface {
 type Entry struct {
 	Period time.Duration
 	Next   time.Time
-	Prev   time.Time
 	Job    Job
 }
 
 func newEntry(period time.Duration) *Entry {
 	return &Entry{
 		Period: period,
-		Prev:   time.Unix(0, 0),
 	}
 }
 
@@ -78,9 +76,7 @@ func (c *Clockwerk) Stop() {
 }
 
 func (c *Clockwerk) schedule(e *Entry) {
-	e.Prev = time.Now()
-
-	e.Next = e.Prev.Add(e.Period)
+	e.Next = time.Now().Add(e.Period)
 }
 
 func (c *Clockwerk) run() {
