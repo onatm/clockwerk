@@ -2,7 +2,7 @@
 
 [![Coverage Status](https://coveralls.io/repos/github/onatm/clockwerk/badge.svg?branch=main)](https://coveralls.io/github/onatm/clockwerk?branch=main)
 [![Go Report Card](https://goreportcard.com/badge/github.com/onatm/clockwerk)](https://goreportcard.com/report/github.com/onatm/clockwerk)
-[![GoDoc](http://godoc.org/github.com/onatm/clockwerk?status.png)](http://godoc.org/github.com/onatm/clockwerk) 
+[![Go Reference](https://pkg.go.dev/badge/github.com/onatm/clockwerk.svg)](https://pkg.go.dev/github.com/onatm/clockwerk)
 
 Job Scheduling Library
 
