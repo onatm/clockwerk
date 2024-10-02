@@ -1,6 +1,6 @@
 # clockwerk
 
-[![Coverage Status](https://coveralls.io/repos/github/onatm/clockwerk/badge.svg?branch=master)](https://coveralls.io/github/onatm/clockwerk?branch=master)
+[![Coverage Status](https://coveralls.io/repos/github/onatm/clockwerk/badge.svg?branch=main)](https://coveralls.io/github/onatm/clockwerk?branch=main)
 [![Go Report Card](https://goreportcard.com/badge/github.com/onatm/clockwerk)](https://goreportcard.com/report/github.com/onatm/clockwerk)
 [![GoDoc](http://godoc.org/github.com/onatm/clockwerk?status.png)](http://godoc.org/github.com/onatm/clockwerk) 
 
@@ -8,11 +8,23 @@ Job Scheduling Library
 
 clockwerk allows you to schedule periodic jobs using a simple, fluent syntax.
 
-## Usage
+## Installing
+
+Using clockwerk is easy. First, use `go get` to install the latest version of the library.
 
 ``` sh
-go get github.com/onatm/clockwerk
+go get -u github.com/onatm/clockwerk@latest
 ```
+
+## Usage
+
+Include clockwerk in your application:
+
+```go
+import "github.com/onatm/clockwerk"
+```
+
+## Example
 
 ``` go
 package main
